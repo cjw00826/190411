@@ -586,3 +586,293 @@ cd
 git
 sudo apt install git
 ls
+git
+ls
+git init hello
+ls
+cd hello
+ls
+git commit
+git config --global user.email cjw00826@naver.com
+git config --global user.name cjw00826
+vi helloworld.c
+ls
+git add helloworld.c
+git commit -m "first commit
+"
+git remote add origin https://github.com/cjw00826/0411.git
+git push -u origin master
+ls
+vi helloworld.c 
+cd
+git init branch
+ls
+cd branch
+ls
+vi hello.c
+ls
+git checkout -b second
+ls
+git branch
+vi hello.c 
+git add hello.c 
+git commit -m "first commit"
+ls
+git checkout -b "second"
+git checkout -b "first"
+git branch
+cd
+git init bran
+c dbran
+ls
+cd bran
+ls
+vi hello.c
+git add hello.c
+git commit -m "first commit"
+git branch
+git checkout -b branch
+git branch
+ls
+vi hello.c
+git add hello.c
+git commit -m "branch commit"
+cat hello.c
+git checkout master
+git branch
+vi hello.c 
+cat hello.c
+git branch
+git merge branch
+vi hello.c 
+git branch
+vi hello.c 
+git branch
+vi hello.c 
+git add hello.c
+git commit -m "master branch"
+git branch
+git checkout branch
+git branch
+vi hello.c 
+git add hello.c
+git commit -m "edit branch"
+git checkout master
+git branch
+git merge branch
+git status
+vi hello.c 
+git add hello.c
+git commit -m "conflict merge"
+cd
+ls
+git init
+ls
+git add *
+git commit -m "backup"
+git remote add origin https://github.com/cjw00826/190411.git
+git push -u origin master
+ls
+cd work
+ls
+cd 0411
+ls
+cd ..
+cd 0404
+ls
+cd
+git add --all
+git commit -m "backup"
+git add *
+ls
+git push origin master
+ls
+rmv
+ls
+cd bran
+ls
+vi hello.c 
+cd ..
+cd branch
+ls
+vi hello.c 
+cd
+cd bran
+vi hello.c 
+cd
+cd hello
+ls
+vi helloworld.c 
+cd
+ls
+git
+cd work
+ls
+cd
+ls
+git init git_test
+ls
+cd git_test
+ls
+git commit
+ls
+vi test1.c
+ls
+git add test1.c
+git commit -m "first test commit"
+ls
+git branch
+git checkout -b branch_test
+git branch
+vi test1.c 
+cat test1.c 
+vi test1.c 
+git add test1.c 
+git commit -m "mod test commit"
+vi test1.c 
+get checkout master
+git branch
+git checkout master
+git branch
+vi test1.c 
+git merge branch_test
+git branch 
+vi test1.c 
+git checkout branch_test 
+git branch
+vi test1.c 
+git checkout master 
+vi test1.c 
+git add test1.c 
+git commit -m "third test branch"
+git commit -m "master branch"
+git branch 
+vi test1.c 
+git add test1.c
+git commit -m "master branch"
+git branch
+git checkout branch_test 
+git branch
+vi test1.c
+git add test1.c 
+git commit -m "edit branch"
+vi test1.c
+git add test1.c 
+git commit -m "edit branch"
+git brach
+git branch
+git checkout master
+git merge branch_test 
+git status
+vi test1.c 
+git add test1.c
+git commit -m "conflict merge"
+cd
+ls
+git init
+git add *
+git commit -m "test1_backup"
+ls
+git init
+git remote
+git remote -v
+git remote add origin https://github.com/cjw00826/test_backup.git
+git remote -v
+git remote
+git remote add origin https://github.com/cjw00826/test_backup.git
+git remote add origin https://github.com/cjw00826/0411.git
+git remote add origin https://github.com/cjw00826/test1.git
+git remote add origin https://github.com/cjw00826/123123.git
+git push -u origin master
+git pull origin master
+ls
+cd
+ls
+cd git_test/
+ls
+cd
+ls
+cd work
+ls
+cd 0417
+mkdir 0417
+ls
+cd 0417
+ls
+git init branch2
+ls
+cd branch2
+ls
+vi hello,c
+vi hello.c
+ls
+git branch
+git add hello.c
+git commit -m "first hello commit"
+ls
+git branch
+git remote add origin https://github.com/cjw00826/test_backup.git
+git push -u origin master
+ls
+git pull origin master
+ls
+vi hello2.c
+ls
+vi hello2.c
+git branch
+git push -u origin master
+git add hello2.c
+git commit -m "second hello commit"
+git remote add origin https://github.com/cjw00826/test_backup.git
+git push -u origin master
+ls
+cd work
+ls
+cd 0404
+ls
+./fork1
+vi hello-pid.c
+vi fork-pattern.c
+./fork-pattern 
+vi fork-pattern.c
+ls
+c dwork
+cd work
+ls
+cd 0404
+ls
+vi fork2.c
+vi fork3.c
+vi fork1.c
+t mux
+tmux
+tmux ls
+tmux
+tmux ls
+ls
+cd work
+ls
+cd 0404
+ls
+vi fork1.c
+cd ..
+ls
+mkdir 0418
+cd 0418
+ls
+tmux ls
+tmux attach -t 0
+ls
+cd git_test
+ls
+cd
+ls
+cd work
+ls
+cd 0418
+ls
+git
+git add *
+git commit -m "0418_work"
+get push -u origin master
+git push -u origin master

@@ -14,9 +14,11 @@
 $
 
 # Command Line History (newest to oldest):
+:q
 :wq
 :w
-:q
+:sp hello.c
+:w hello.c
 :tmux
 :sp fork2.c
 :sp
@@ -38,6 +40,7 @@ $
 :o tt.c
 
 # Search String History (newest to oldest):
+??\a
 ? @$
 ?/sub
 ?/sum
@@ -49,48 +52,87 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	perror("wait error");
-	
-""1	LINE	0
-	>>>>>>> branch
+""0	LINE	0
+			printf("parent\n");
+"1	LINE	0
+			printf("parent\n");
 "2	LINE	0
-		printf("edit branch\n");
+				printf("1st cihld : %d\n", getpid());
 "3	LINE	0
-	=======
+	
 "4	LINE	0
-	<<<<<<< HEAD
-"5	LINE	0
-			sleep(1);
+		printf("parent file\n");
+"5	CHAR	0
+	#include <stdio.h>
+	
+	int main()
+	{
+		printf("hi hello\n");
+	
+		return 0;
+	}
 "6	LINE	0
-			var++;
+	>>>>>>> branch_test
 "7	LINE	0
-			glob++;
+	=======
 "8	LINE	0
-		var = 88;
+		printf("mod2 test github\n\n");
 "9	LINE	0
-		int var;
+	<<<<<<< HEAD
 "-	CHAR	0
-		
+	c
 
 # File marks:
-'0  5  1  ~/bran/hello.c
-'1  5  9  ~/bran/hello.c
-'2  6  9  ~/branch/hello.c
-'3  7  0  ~/hello/helloworld.c
-'4  47  0  ~/work/0321/test2.c
-'5  17  0  ~/work/0321/test1.c
-'6  1  0  ~/work/0321/test3.c
-'7  1  0  ~/work/0404/echoall.c
-'8  29  0  ~/work/0404/exec.c
-'9  1  0  ~/work/0404/log.wait1
+'0  12  0  ~/work/0418/test1.c
+'1  20  0  ~/work/0418/pipe.c
+'2  7  0  ~/hello/helloworld.c
+'3  6  0  ~/git_test/test1.c
+'4  6  9  ~/branch/hello.c
+'5  8  0  /
+'6  5  1  ~/bran/hello.c
+'7  5  22  ~/tt1324/test1.c
+'8  13  0  ~/work/0418/pipe.c
+'9  39  1  ~/work/0418/double_fork.c
 
 # Jumplist (newest first):
--'  5  1  ~/bran/hello.c
--'  1  0  ~/bran/hello.c
--'  6  9  ~/branch/hello.c
--'  1  0  ~/branch/hello.c
+-'  12  0  ~/work/0418/test1.c
+-'  20  0  ~/work/0418/pipe.c
 -'  7  0  ~/hello/helloworld.c
+-'  6  0  ~/git_test/test1.c
+-'  6  9  ~/branch/hello.c
+-'  8  0  /
+-'  35  0  /
+-'  1  0  /
+-'  8  0  /home
+-'  8  0  ~/
+-'  8  0  ~/branch
+-'  5  1  ~/bran/hello.c
+-'  5  22  ~/tt1324/test1.c
+-'  1  0  ~/tt1324/test1.c
+-'  13  0  ~/work/0418/pipe.c
+-'  1  0  ~/work/0418/pipe.c
+-'  39  1  ~/work/0418/double_fork.c
+-'  28  4  ~/work/0418/double_fork.c
+-'  30  0  ~/work/0418/double_fork.c
+-'  1  0  ~/work/0418/double_fork.c
+-'  2  0  ~/work/0418/race_condition.c
+-'  1  18  ~/work/0418/race_condition.c
+-'  5  54  ~/work/0418/vfork1.c
+-'  1  0  ~/work/0418/vfork1.c
+-'  11  5  ~/work/0418/race_condition.c
+-'  14  0  ~/work/0418/race_condition.c
+-'  8  1  ~/work/0418/test1.c
+-'  17  1  ~/work/0418/test1.c
+-'  1  0  ~/work/0418/test1.c
+-'  12  22  ~/work/0404/fork1.c
+-'  5  10  ~/work/0417/branch2/hello2.c
+-'  1  0  ~/work/0417/branch2/hello2.c
+-'  1  0  ~/work/0417/branch2/hello.c
+-'  1  0  ~/work/0417/branch2/hello,c
+-'  5  11  ~/git_test/test1.c
+-'  1  0  ~/git_test/test1.c
+-'  1  0  ~/bran/hello.c
+-'  1  0  ~/branch/hello.c
 -'  1  0  ~/hello/helloworld.c
 -'  47  0  ~/work/0321/test2.c
 -'  17  0  ~/work/0321/test1.c
@@ -124,7 +166,6 @@ $
 -'  8  3  ~/work/0404/fork2.c
 -'  3  0  ~/work/0404/fork2.c
 -'  2  0  ~/work/0404/fork2.c
--'  12  22  ~/work/0404/fork1.c
 -'  13  7  ~/work/0404/fork2.c
 -'  1  0  ~/work/0404/fork2.c
 -'  17  54  ~/work/0404/fork1.c
@@ -151,39 +192,81 @@ $
 -'  6  24  ~/work/0404/test2.c
 -'  1  0  ~/work/0404/test2.c
 -'  4  30  ~/work/0404/test1.c
--'  8  19  ~/work/0404/test1.c
--'  2  0  ~/work/0404/test1.c
--'  1  0  ~/work/0404/hello-pid.c
--'  1  0  ~/pstree.txt
--'  1  0  ~/pstree.c
--'  1  0  ~/pstree
--'  5  7  ~/work/0321/tt.c
--'  1  0  ~/work/0321/practice1.c
--'  1  0  ~/cal.h
--'  1  0  ~/cal3.c
--'  1  0  ~/cal2.c
--'  1  0  ~/test2.c
--'  10  27  ~/work/0321/test2.c
--'  10  0  ~/work/0321/cal2.c
--'  1  3  ~/work/0321/test2.c
--'  2  0  ~/work/0321/test2.c
--'  8  0  ~/work/0321/cal2.c
--'  42  0  ~/work/0321/cal2.c
--'  27  0  ~/work/0321
--'  1  0  ~/work/0321/tt.c
--'  43  0  ~/work/0321/cal2.c
--'  1  0  ~/work/0321/cal2.c
--'  3  4  ~/work/0321/cal2.c
--'  51  0  ~/work/0321/cal2.c
--'  1  0  ~/work/test.c
--'  1  0  ~/work/test1.c
--'  1  0  ~/test1.c
--'  10  0  ~/work/0321/cal3.c
--'  20  14  ~/work/0321/cal.h
--'  18  20  ~/work/0321/cal3.c
--'  23  0  ~/work/0321/cal3.c
 
 # History of marks within files (newest to oldest):
+
+> ~/work/0418/test1.c
+	"	12	0
+	^	8	2
+	.	8	1
+	+	20	0
+	+	19	9
+	+	18	0
+	+	6	0
+	+	6	21
+	+	2	19
+	+	3	18
+	+	6	3
+	+	18	3
+	+	17	1
+	+	6	11
+	+	8	10
+	+	10	4
+	+	17	0
+	+	17	0
+	+	10	24
+	+	11	26
+	+	16	1
+	+	10	22
+	+	12	3
+	+	12	22
+	+	14	7
+	+	10	23
+	+	11	1
+	+	14	2
+	+	15	4
+	+	6	0
+	+	11	0
+	+	13	0
+	+	13	0
+	+	14	7
+	+	14	7
+	+	12	21
+	+	13	10
+	+	15	10
+	+	19	8
+	+	10	17
+	+	13	14
+	+	15	17
+	+	8	1
+
+> ~/work/0418/pipe.c
+	"	20	0
+
+> ~/hello/helloworld.c
+	"	7	0
+	^	7	1
+	.	7	0
+	+	7	0
+
+> ~/git_test/test1.c
+	"	6	0
+	.	6	0
+	+	5	0
+	+	5	8
+	+	5	27
+	+	5	10
+	+	5	10
+	+	5	0
+	+	5	0
+	+	6	0
+
+> ~/branch/hello.c
+	"	6	9
+	^	6	10
+	.	6	9
+	+	7	0
+	+	6	9
 
 > ~/bran/hello.c
 	"	5	1
@@ -197,64 +280,117 @@ $
 	+	5	0
 	+	6	0
 
-> ~/branch/hello.c
-	"	6	9
-	^	6	10
-	.	6	9
-	+	7	0
-	+	6	9
-
-> ~/hello/helloworld.c
-	"	7	0
-	^	7	1
-	.	7	0
-	+	7	0
-
-> ~/work/0321/test2.c
-	"	47	0
-	^	11	0
-	.	10	27
-	+	1	4
-	+	3	0
-	+	4	7
-	+	4	16
-	+	48	0
-	+	46	0
-	+	47	0
-	+	7	0
-	+	13	0
+> ~/tt1324/test1.c
+	"	5	22
+	^	5	23
+	.	5	19
 	+	8	0
-	+	9	0
-	+	10	0
-	+	3	18
-	+	7	27
-	+	8	27
-	+	9	27
-	+	10	27
+	+	7	9
+	+	6	0
+	+	5	19
+
+> ~/work/0418/double_fork.c
+	"	39	1
+	^	28	3
+	.	39	0
+	+	43	0
+	+	42	9
+	+	41	0
+	+	12	23
+	+	40	0
+	+	39	0
+	+	17	15
+	+	39	17
+	+	20	3
+	+	14	2
+	+	38	0
+	+	37	3
+	+	38	1
+	+	20	8
+	+	14	2
+	+	20	2
+	+	22	4
+	+	21	5
+	+	25	0
+	+	16	0
+	+	25	3
+	+	31	4
+	+	25	19
+	+	31	2
+	+	36	0
+	+	34	5
+	+	31	21
+	+	34	21
+	+	17	12
+	+	16	18
+	+	17	32
+	+	31	38
+	+	34	40
+	+	35	10
+	+	30	0
+	+	31	0
+	+	30	0
+	+	31	0
+	+	30	33
+	+	8	12
+	+	20	9
+	+	25	13
 	+	11	0
-	+	10	27
+	+	10	41
+	+	17	13
+	+	15	15
+	+	19	16
+	+	24	16
+	+	34	14
+	+	30	18
+	+	31	17
+	+	30	36
+	+	31	36
+	+	29	0
+	+	28	4
+	+	17	35
+	+	28	3
+	+	39	0
 
-> ~/work/0321/test1.c
-	"	17	0
-	^	18	8
-	.	18	7
-	+	9	25
-	+	16	1
-	+	5	12
-	+	3	15
-	+	9	0
+> ~/work/0418/vfork1.c
+	"	5	54
+	^	5	57
+	.	5	57
+	+	25	64
+	+	28	0
+	+	9	31
+	+	18	27
+	+	19	35
+	+	22	32
+	+	23	31
+	+	5	57
+
+> ~/work/0418/race_condition.c
+	"	2	0
+	^	2	0
+	.	1	18
+	+	8	21
+	+	1	36
+	+	27	0
+	+	11	5
+	+	13	0
+	+	11	5
+	+	1	18
+	+	1	18
+
+> ~/work/0404/fork1.c
+	"	24	0
+	^	12	23
+	.	13	42
+	+	15	0
+	+	17	38
+	+	20	0
+	+	15	0
+	+	15	0
+	+	17	54
 	+	14	0
-	+	13	18
-	+	18	6
-	+	11	8
-	+	21	0
-	+	18	7
-
-> ~/work/0321/test3.c
-	"	1	0
-
-> ~/work/0404/echoall.c
-	"	1	0
+	+	14	23
+	+	13	42
 
 > ~/work/0404/exec.c
 	"	29	0
@@ -264,7 +400,7 @@ $
 	+	21	23
 	+	30	0
 
-> ~/work/0404/log.wait1
+> ~/work/0404/log.fork3.c
 	"	1	0
 
 > ~/work/0404/fork3.c
@@ -312,6 +448,93 @@ $
 	+	8	3
 	+	7	56
 
+> ~/work/0404/fork-pattern.c
+	"	1	0
+	^	11	24
+	.	11	23
+	+	22	0
+	+	1	18
+	+	2	18
+	+	4	1
+	+	20	1
+	+	21	2
+	+	20	10
+	+	11	23
+
+> ~/work/0404/hello-pid.c
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/work/0417/branch2/hello2.c
+	"	5	10
+	^	5	11
+	.	5	10
+	+	1	0
+	+	5	10
+
+> ~/work/0417/branch2/hello.c
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	3
+	+	1	0
+	+	1	16
+	+	1	0
+
+> ~/work/0417/branch2/hello,c
+	"	1	0
+
+> ~/work/0321/test2.c
+	"	47	0
+	^	11	0
+	.	10	27
+	+	1	4
+	+	3	0
+	+	4	7
+	+	4	16
+	+	48	0
+	+	46	0
+	+	47	0
+	+	7	0
+	+	13	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	3	18
+	+	7	27
+	+	8	27
+	+	9	27
+	+	10	27
+	+	11	0
+	+	10	27
+
+> ~/work/0321/test1.c
+	"	17	0
+	^	18	8
+	.	18	7
+	+	9	25
+	+	16	1
+	+	5	12
+	+	3	15
+	+	9	0
+	+	14	0
+	+	13	18
+	+	18	6
+	+	11	8
+	+	21	0
+	+	18	7
+
+> ~/work/0321/test3.c
+	"	1	0
+
+> ~/work/0404/echoall.c
+	"	1	0
+
+> ~/work/0404/log.wait1
+	"	1	0
+
 > ~/work/0404/ff.c
 	"	1	0
 	.	1	0
@@ -357,33 +580,6 @@ $
 
 > ~/wait1.c
 	"	1	0
-
-> ~/work/0404/fork1.c
-	"	12	22
-	^	12	23
-	.	13	42
-	+	15	0
-	+	17	38
-	+	20	0
-	+	15	0
-	+	15	0
-	+	17	54
-	+	14	0
-	+	14	23
-	+	13	42
-
-> ~/work/0404/fork-pattern.c
-	"	1	0
-	^	11	24
-	.	11	23
-	+	22	0
-	+	1	18
-	+	2	18
-	+	4	1
-	+	20	1
-	+	21	2
-	+	20	10
-	+	11	23
 
 > ~/work/0404/helpers.h
 	"	5	9
@@ -464,12 +660,6 @@ $
 	+	1	0
 	+	6	31
 	+	7	47
-
-> ~/work/0404/hello-pid.c
-	"	1	0
-	^	1	0
-	.	1	0
-	+	1	0
 
 > ~/pstree.txt
 	"	1	0
